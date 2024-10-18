@@ -16,8 +16,4 @@ app.get('/', (req, res) => {
   res.redirect(302, finalUrl);
 });
 
-// Lắng nghe trên cổng do Stormkit chỉ định
-const port = process.env.PORT || 3000;
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
+module.exports = app;
