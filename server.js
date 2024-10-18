@@ -4,7 +4,7 @@ const app = express();
 // Chuyển hướng với query string
 app.get("/", (req, res) => {
   const queryString = req.url.split("?")[1];
-  const redirectUrl = `https://www.example.com${queryString ? "?" + queryString : ""}`;
+  const redirectUrl = `https://www.examplse.com${queryString ? "?" + queryString : ""}`;
   res.redirect(301, redirectUrl);
 });
 
