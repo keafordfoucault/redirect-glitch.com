@@ -1,14 +1,11 @@
 {
-  "name": "back4app-redirect-app",
+  "name": "stormkit-redirect",
   "version": "1.0.0",
-  "description": "Cloud code to redirect with query string on Back4App",
-  "main": "cloud/main.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
     "express": "^4.17.1"
-  },
-  "scripts": {
-    "start": "node cloud/main.js"
-  },
-  "author": "Your Name",
-  "license": "ISC"
+  }
 }
