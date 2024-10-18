@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 // Chức năng chuyển hướng với query string
-app.get('*', (req, res) => {
+app.get('/', (req, res) => {
   // URL đích cho việc chuyển hướng
   const redirectUrl = 'https://example.com';
   
