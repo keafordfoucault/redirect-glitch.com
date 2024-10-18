@@ -1,20 +1,10 @@
-const express = require('express');
-const app = express();
+addEventListener('fetch', event => {
+  event.respondWith(handleRequest(event.request));
+})
 
-// Định nghĩa các route
-app.get('/', (req, res) => {
-  const redirectUrl = 'https://example.com';
-  const queryString = new URLSearchParams(req.query).toString();
-  const finalUrl = queryString ? `${redirectUrl}?${queryString}` : redirectUrl;
-  res.redirect(302, finalUrl);
-});
-
-app.get('/redirect', (req, res) => {
-  const redirectUrl = 'https://example.com';
-  const queryString = new URLSearchParams(req.query).toString();
-  const finalUrl = queryString ? `${redirectUrl}?${queryString}` : redirectUrl;
-  res.redirect(302, finalUrl);
-});
-
-// Xuất ứng dụng
-module.exports = app;
+async function handleRequest(request) {
+  return new Response(null, {
+    status: 301,
+    headers: { 'Location': 'https://example.com' }
+  });
+}
