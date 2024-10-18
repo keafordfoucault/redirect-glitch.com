@@ -1,5 +1,5 @@
 {
-  "name": "glitch-redirect-app",
+  "name": "koyeb-redirect-app",
   "version": "1.0.0",
   "description": "A simple redirect app using query strings",
   "main": "server.js",
@@ -8,8 +8,5 @@
   },
   "dependencies": {
     "express": "^4.17.1"
-  },
-  "engines": {
-    "node": "14.x"
   }
 }
