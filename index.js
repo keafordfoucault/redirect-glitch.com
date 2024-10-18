@@ -1,19 +1,20 @@
 const express = require('express');
 const app = express();
 
-// Chức năng chuyển hướng với query string
+// Định nghĩa các route
 app.get('/', (req, res) => {
-  // URL đích cho việc chuyển hướng
   const redirectUrl = 'https://example.com';
-  
-  // Lấy query string từ yêu cầu
   const queryString = new URLSearchParams(req.query).toString();
-  
-  // Kết hợp URL với query string
   const finalUrl = queryString ? `${redirectUrl}?${queryString}` : redirectUrl;
-  
-  // Chuyển hướng đến URL cuối cùng
   res.redirect(302, finalUrl);
 });
 
+app.get('/redirect', (req, res) => {
+  const redirectUrl = 'https://example.com';
+  const queryString = new URLSearchParams(req.query).toString();
+  const finalUrl = queryString ? `${redirectUrl}?${queryString}` : redirectUrl;
+  res.redirect(302, finalUrl);
+});
+
+// Xuất ứng dụng
 module.exports = app;
